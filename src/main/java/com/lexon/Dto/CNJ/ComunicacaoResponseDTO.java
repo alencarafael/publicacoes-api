@@ -1,16 +1,15 @@
-package com.lexon.Dto;
-
+package com.lexon.Dto.CNJ;
 
 import java.util.List;
 
-public class ComunicaResponseDTO {
+public class ComunicacaoResponseDTO {
     public String status;
     public String message;
-    public Integer count;
+    public int count;
     public List<ItemDTO> items;
 
     public static class ItemDTO {
-        public Integer id;
+        public long id;
         public String data_disponibilizacao;
         public String siglaTribunal;
         public String tipoComunicacao;
@@ -22,7 +21,7 @@ public class ComunicaResponseDTO {
         public String tipoDocumento;
         public String nomeClasse;
         public String codigoClasse;
-        public Integer numeroComunicacao;
+        public long numeroComunicacao;
         public boolean ativo;
         public String hash;
         public String datadisponibilizacao;
@@ -35,20 +34,20 @@ public class ComunicaResponseDTO {
     public static class DestinatarioDTO {
         public String nome;
         public String polo;
-        public Integer comunicacao_id;
+        public long comunicacao_id;
     }
 
     public static class DestinatarioAdvogadoDTO {
-        public Integer id;
-        public Integer comunicacao_id;
-        public Integer advogado_id;
+        public long id;
+        public long comunicacao_id;
+        public long advogado_id;
         public String created_at;
         public String updated_at;
         public AdvogadoDTO advogado;
     }
 
     public static class AdvogadoDTO {
-        public Integer id;
+        public long id;
         public String nome;
         public String numero_oab;
         public String uf_oab;
